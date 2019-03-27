@@ -162,6 +162,9 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     WifiResTarget
 
+PRODUCT_PACKAGES += \
+    NotchBarKiller
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2
