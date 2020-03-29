@@ -139,6 +139,23 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    AospFrameworkResOverlay \
+    AospWifiResOverlay \
+    DevicesAndroidOverlay \
+    DevicesOverlay \
+    ElderlyNavigationBarOverlay \
+    FrameworksResTarget \
+    GestureLineOverlay \
+    MccMncOverlay \
+    MiuiBiometricResOverlay \
+    MiuiBluetoothOverlay \
+    MiuiFrameworkResOverlay \
+    MiuiSettingsResOverlay \
+    MiuiSystemUIResOverlay \
+    NetworkStackOverlay \
+    WifiResTarget
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2

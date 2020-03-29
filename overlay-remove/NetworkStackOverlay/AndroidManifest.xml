@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="" package="com.android.networkstack.overlay" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <overlay android:isStatic="true" android:targetName="" android:targetPackage=""/>
+    <application android:extractNativeLibs="false" android:hasCode="false" android:label=""/>
+</manifest>
