@@ -3,11 +3,13 @@ on init
 
     setprop sys.usb.configfs 1
 
-    start init-recovery-qcom-sh
-
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    start init-recovery-qcom-sh
 
 service init-recovery-qcom-sh /init.recovery.qcom.sh
-    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+    oneshot
