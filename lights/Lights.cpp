@@ -31,9 +31,6 @@ namespace {
 #define LCD_ATTR(x) STRINGIFY(PPCAT(LCD(panel0-backlight), x))
 
 #define LEDS(x) PPCAT(/sys/class/leds, x)
-#define BLUE_ATTR(x) STRINGIFY(PPCAT(LEDS(blue), x))
-#define GREEN_ATTR(x) STRINGIFY(PPCAT(LEDS(green), x))
-#define RED_ATTR(x) STRINGIFY(PPCAT(LEDS(red), x))
 #define WHITE_ATTR(x) STRINGIFY(PPCAT(LEDS(white), x))
 /* clang-format on */
 
@@ -44,19 +41,9 @@ using ::android::base::WriteStringToFile;
 constexpr auto kDefaultMaxLedBrightness = 255;
 constexpr auto kDefaultMaxScreenBrightness = 4095;
 
-// Each step will stay on for 50ms by default.
-constexpr auto kRampStepDuration = 50;
-
-// Each value represents a duty percent (0 - 100) for the led pwm.
-constexpr std::array kBrightnessRamp = {0, 12, 25, 37, 50, 72, 85, 100};
-
 // Write value to path and close file.
 bool WriteToFile(const std::string& path, uint32_t content) {
     return WriteStringToFile(std::to_string(content), path);
-}
-
-bool WriteToFile(const std::string& path, const std::string& content) {
-    return WriteStringToFile(content, path);
 }
 
 uint32_t RgbaToBrightness(uint32_t color) {
@@ -82,21 +69,6 @@ inline uint32_t RgbaToBrightness(uint32_t color, uint32_t max_brightness) {
     return RgbaToBrightness(color) * max_brightness / 0xFF;
 }
 
-/*
- * Scale each value of the brightness ramp according to the
- * brightness of the color.
- */
-std::string GetScaledDutyPcts(uint32_t brightness) {
-    std::stringstream ramp;
-
-    for (size_t i = 0; i < kBrightnessRamp.size(); i++) {
-        if (i > 0) ramp << ",";
-        ramp << kBrightnessRamp[i] * brightness / 0xFF;
-    }
-
-    return ramp.str();
-}
-
 inline bool IsLit(uint32_t color) {
     return color & 0x00ffffff;
 }
@@ -119,9 +91,7 @@ Lights::Lights() {
                    << kDefaultMaxScreenBrightness;
     }
 
-    if (ReadFileToString(BLUE_ATTR(max_brightness), &buf) ||
-        ReadFileToString(RED_ATTR(max_brightness), &buf) ||
-        ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
+    if (ReadFileToString(WHITE_ATTR(max_brightness), &buf)) {
         max_led_brightness_ = std::stoi(buf);
     } else {
         max_led_brightness_ = kDefaultMaxLedBrightness;
@@ -169,47 +139,21 @@ void Lights::setLightNotification(LightType type, const HwLightState& state) {
 }
 
 void Lights::applyNotificationState(const HwLightState& state) {
-    std::map<std::string, int> colorValues;
-    colorValues["red"] = colorValues["green"] = colorValues["blue"] = colorValues["white"] =
-            RgbaToBrightness(state.color, max_led_brightness_);
-
-    auto makeLedPath = [](const std::string& led, const std::string& op) -> std::string {
-        return "/sys/class/leds/" + led + "/" + op;
-    };
+    uint32_t white_brightness = RgbaToBrightness(state.color, max_led_brightness_);
 
     // Turn off the leds (initially)
-    for (const auto& entry : colorValues) {
-        WriteToFile(makeLedPath(entry.first, "breath"), 0);
-    }
+    WriteToFile(WHITE_ATTR(breath), 0);
 
     if (state.flashMode == FlashMode::TIMED && state.flashOnMs > 0 && state.flashOffMs > 0) {
-        /*
-         * If the flashOnMs duration is not long enough to fit ramping up
-         * and down at the default step duration, step duration is modified
-         * to fit.
-         */
-        int32_t step_duration = kRampStepDuration;
-        int32_t pause_hi = state.flashOnMs - (step_duration * kBrightnessRamp.size() * 2);
-        if (pause_hi < 0) {
-            step_duration = state.flashOnMs / (kBrightnessRamp.size() * 2);
-            pause_hi = 0;
-        }
-
         LOG(DEBUG) << __func__ << ": color=" << std::hex << state.color << std::dec
                    << " onMs=" << state.flashOnMs << " offMs=" << state.flashOffMs;
-        for (const auto& entry : colorValues) {
-            WriteToFile(makeLedPath(entry.first, "lo_idx"), 0);
-            WriteToFile(makeLedPath(entry.first, "delay_off"), static_cast<uint32_t>(pause_hi));
-            WriteToFile(makeLedPath(entry.first, "delay_on"),
-                        static_cast<uint32_t>(state.flashOffMs));
-            WriteToFile(makeLedPath(entry.first, "lut_pattern"), GetScaledDutyPcts(entry.second));
-            WriteToFile(makeLedPath(entry.first, "step_ms"), static_cast<uint32_t>(step_duration));
-            WriteToFile(makeLedPath(entry.first, "breath"), 1);
-        }
+
+        // White
+        WriteToFile(WHITE_ATTR(delay_off), static_cast<uint32_t>(state.flashOffMs));
+        WriteToFile(WHITE_ATTR(delay_on), static_cast<uint32_t>(state.flashOnMs));
+        WriteToFile(WHITE_ATTR(breath), 1);
     } else {
-        for (const auto& entry : colorValues) {
-            WriteToFile(makeLedPath(entry.first, "brightness"), entry.second);
-        }
+        WriteToFile(WHITE_ATTR(brightness), white_brightness);
     }
 }
 
