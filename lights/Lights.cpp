@@ -83,6 +83,13 @@ namespace light {
 Lights::Lights() {
     std::string buf;
 
+    std::lock_guard<std::mutex> lock(globalLock);
+
+    addLight(LightType::BACKLIGHT, 0);
+    addLight(LightType::BATTERY, 0);
+    addLight(LightType::NOTIFICATIONS, 0);
+    addLight(LightType::ATTENTION, 0);
+
     if (ReadFileToString(LCD_ATTR(max_brightness), &buf)) {
         max_screen_brightness_ = std::stoi(buf);
     } else {
@@ -99,22 +106,43 @@ Lights::Lights() {
     }
 }
 
-ndk::ScopedAStatus Lights::setLightState(int /*id*/, const HwLightState& state) {
-    for (auto&& light : lights_) {
-        LightType type = light.first;
-        auto it = lights_.find(type);
+ndk::ScopedAStatus Lights::setLightState(int id, const HwLightState& state) {
+    if (!(0 <= id && id < availableLights.size())) {
+        LOG(ERROR) << "Light id " << (int32_t)id << " does not exist.";
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
 
-        if (it == lights_.end()) {
-            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-        }
+    HwLight const& light = availableLights[id];
 
-        it->second(type, state);
+    switch (light.type) {
+        case LightType::BATTERY:
+        case LightType::ATTENTION:
+        case LightType::NOTIFICATIONS:
+            setLightNotification(light.type, state);
+            break;
+        case LightType::BACKLIGHT:
+            setLightBacklight(light.type, state);
+            break;
+        default:
+            break;
+    }
+
+    return ndk::ScopedAStatus::ok();
+}
+
+ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* lights) {
+    for (auto i = availableLights.begin(); i != availableLights.end(); i++) {
+        lights->push_back(*i);
     }
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Lights::getLights(std::vector<HwLight>* /*lights*/) {
-    return ndk::ScopedAStatus::ok();
+void Lights::addLight(LightType const type, int const ordinal) {
+    HwLight light{};
+    light.id = availableLights.size();
+    light.type = type;
+    light.ordinal = ordinal;
+    availableLights.emplace_back(light);
 }
 
 void Lights::setLightBacklight(LightType /*type*/, const HwLightState& state) {

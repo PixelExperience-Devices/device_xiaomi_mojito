@@ -21,6 +21,7 @@
 #include <hardware/hardware.h>
 #include <hardware/lights.h>
 #include <map>
+#include <mutex>
 #include <sstream>
 #include <unordered_map>
 
@@ -36,6 +37,7 @@ class Lights : public BnLights {
     ndk::ScopedAStatus getLights(std::vector<HwLight>* types) override;
 
   private:
+    void addLight(LightType const type, int const ordinal);
     void setLightBacklight(LightType type, const HwLightState& state);
     void setLightNotification(LightType type, const HwLightState& state);
     void applyNotificationState(const HwLightState& state);
@@ -43,11 +45,8 @@ class Lights : public BnLights {
     uint32_t max_led_brightness_;
     uint32_t max_screen_brightness_;
 
-    std::unordered_map<LightType, std::function<void(LightType type, const HwLightState&)>> lights_{
-            {LightType::ATTENTION, [this](auto&&... args) { setLightNotification(args...); }},
-            {LightType::BACKLIGHT, [this](auto&&... args) { setLightBacklight(args...); }},
-            {LightType::BATTERY, [this](auto&&... args) { setLightNotification(args...); }},
-            {LightType::NOTIFICATIONS, [this](auto&&... args) { setLightNotification(args...); }}};
+    std::vector<HwLight> availableLights;
+    std::mutex globalLock;
 
     // Keep sorted in the order of importance.
     std::array<std::pair<LightType, HwLightState>, 3> notif_states_ = {{
