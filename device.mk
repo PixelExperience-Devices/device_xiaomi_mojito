@@ -179,7 +179,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.mojito
+    android.hardware.power-service.mojito
 
 # Telephony
 PRODUCT_PACKAGES += \
