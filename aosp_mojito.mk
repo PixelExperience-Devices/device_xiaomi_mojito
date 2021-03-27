@@ -26,7 +26,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=mojito \
-    PRIVATE_BUILD_DESC="mojito-user 11 RKQ1.201022.002 V12.0.2.0.RKGMIXM release-keys"
-
-BUILD_FINGERPRINT := Redmi/mojito/mojito:11/RKQ1.201022.002/V12.0.2.0.RKGMIXM:user/release-keys
+    PRODUCT_NAME=mojito
