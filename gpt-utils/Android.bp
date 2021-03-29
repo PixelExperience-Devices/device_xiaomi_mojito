@@ -30,6 +30,7 @@ cc_library {
     ],
     srcs: [
         "gpt-utils.cpp",
+        "recovery-ufs-bsg.cpp",
     ],
     owner: "qti",
     header_libs: [
