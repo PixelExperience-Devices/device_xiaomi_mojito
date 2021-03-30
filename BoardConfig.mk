@@ -46,8 +46,26 @@ AB_OTA_PARTITIONS := \
 TARGET_BOOTLOADER_BOARD_NAME := mojito
 TARGET_NO_BOOTLOADER := true
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+TARGET_USE_QTI_BT_STACK := true
+
+# Camera
+TARGET_USES_QTI_CAMERA_DEVICE := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
+
+# FM
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+BOARD_HAVE_QCOM_FM := true
+
+# Graphics
+TARGET_USES_DRM_PP := true
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mojito
@@ -126,6 +144,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
+# RenderScript
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+
+# RIL
+TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
@@ -135,3 +159,6 @@ BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
+
+# Inherit from the proprietary version
+-include vendor/xiaomi/mojito/BoardConfigVendor.mk

@@ -13,9 +13,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/xiaomi/mojito/mojito-vendor.mk)
+
 # API
 PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
+
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService-Soong
+
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -33,6 +44,19 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti \
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
+
+PRODUCT_PACKAGES += \
+    libbluetooth_qti \
+    libbtconfigstore \
+    bt_configstore.conf
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
@@ -44,9 +68,34 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap \
+    vendor.qti.hardware.camera.device@1.0
+
+# Configstore
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.capabilityconfigstore@1.0
+
+# Cryptfs
+PRODUCT_PACKAGES += \
+    libcryptfs_hw \
+    vendor.qti.hardware.cryptfshw@1.0
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig.qti \
+    libgralloc.qti \
+    libqdMetaData \
+    libqdMetaData.system \
+    libvulkan \
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0 \
+    vendor.qti.hardware.display.composer@3.0
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -56,6 +105,11 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
+
+# Framework detect
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    libvndfwk_detect_jni.qti
 
 # Init scripts
 PRODUCT_PACKAGES += \
@@ -67,6 +121,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/kernel:kernel \
     $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
 
+# Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail
+
+# Net
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
@@ -76,6 +142,26 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl
 
+# Telephony
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -84,3 +170,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libnl
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
