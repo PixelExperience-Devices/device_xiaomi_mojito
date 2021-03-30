@@ -57,6 +57,9 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"
 BOARD_HAVE_QCOM_FM := true

@@ -131,6 +131,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/kernel:kernel \
     $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.qti
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail
