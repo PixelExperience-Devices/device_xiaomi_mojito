@@ -64,7 +64,8 @@ PRODUCT_PACKAGES += \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/kernel:kernel
+    $(LOCAL_PATH)/prebuilt/kernel:kernel \
+    $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
