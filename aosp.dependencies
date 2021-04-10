@@ -10,5 +10,11 @@
    "target_path" : "vendor/xiaomi/mojito",
    "remote"      : "pixel-devices-blobs",
    "branch"      : "eleven"
+ },
+ {
+   "repository"  : "vendor_xiaomi_mojito-vendor",
+   "target_path" : "vendor/xiaomi/mojito-vendor",
+   "remote"      : "pixel-devices-blobs",
+   "branch"      : "eleven"
  }
 ]
