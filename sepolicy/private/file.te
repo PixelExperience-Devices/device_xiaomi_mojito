@@ -1,1 +1,4 @@
 type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
+
+type thermal_data_file, file_type, data_file_type;
