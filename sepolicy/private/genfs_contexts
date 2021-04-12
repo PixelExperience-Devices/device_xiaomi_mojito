@@ -31,3 +31,5 @@ genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/wakeup/wakeup      
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup                                                                                               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup/wakeup                                                                                                                     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone/wakeup                                                                                  u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/trigger                                                      u:object_r:sysfs_leds:s0
