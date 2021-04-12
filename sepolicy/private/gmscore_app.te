@@ -1,0 +1,5 @@
+get_prop(gmscore_app, vendor_default_prop)
+get_prop(gmscore_app, adbd_prop)
+
+allow gmscore_app linkerconfig_file:dir r_dir_perms;
+dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;
