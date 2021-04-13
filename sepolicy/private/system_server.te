@@ -4,3 +4,6 @@ get_prop(system_server, vendor_persist_camera_prop)
 
 # Allow system_server to getpgid app_zygote
 allow system_server app_zygote:process getpgid;
+
+# proc_last_kmsg
+allow system_server proc_last_kmsg:file r_file_perms;
