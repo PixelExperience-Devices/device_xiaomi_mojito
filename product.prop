@@ -5,6 +5,11 @@ audio.sys.routing.latency=300
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
 
+# VoLTE
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Shutdown
 ro.build.shutdown_timeout=2
 
