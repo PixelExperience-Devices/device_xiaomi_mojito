@@ -5,3 +5,8 @@ type vendor_sysfs_usb_supply, sysfs_type, fs_type;
 type vendor_sysfs_usbpd_device, sysfs_type, fs_type;
 
 type thermal_data_file, file_type, data_file_type;
+
+type adsprpcd_file, file_type;
+type bt_firmware_file, file_type;
+type firmware_file, file_type;
+type persist_file, file_type;
