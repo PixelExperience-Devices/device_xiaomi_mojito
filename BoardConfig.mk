@@ -174,7 +174,7 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
--include vendor/xiaomi/mojito/BoardConfigVendor.mk
+include vendor/xiaomi/mojito/BoardConfigVendor.mk
 
 # Inherit Prebuilt Vendor Images
--include vendor/xiaomi/mojito-vendor/BoardConfig.mk
+include vendor/xiaomi/mojito-vendor/BoardConfig.mk
