@@ -7,3 +7,6 @@ audio.sys.offload.pstimeout.secs=3
 
 # Shutdown
 ro.build.shutdown_timeout=2
+
+# Telephony
+ro.telephony.default_network=22,20
