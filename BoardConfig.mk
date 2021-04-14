@@ -42,6 +42,10 @@ AB_OTA_PARTITIONS := \
     vbmeta_system \
     vendor_boot
 
+# Audio
+USE_CUSTOM_AUDIO_POLICY := 1
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mojito
 TARGET_NO_BOOTLOADER := true
