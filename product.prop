@@ -5,6 +5,11 @@ audio.sys.routing.latency=300
 audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
 
+# Blurs (hidden under dev option)
+ro.surface_flinger.supports_background_blur=1
+persist.sys.sf.disable_blurs=1
+ro.sf.blurs_are_expensive=1
+
 # VoLTE
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
