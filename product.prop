@@ -15,3 +15,6 @@ ro.build.shutdown_timeout=2
 
 # Telephony
 ro.telephony.default_network=22,20
+
+# Zygote Preforking
+persist.device.config.runtime_native.uasp_pool_enabled=true
