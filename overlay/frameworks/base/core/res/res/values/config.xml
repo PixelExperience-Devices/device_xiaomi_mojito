@@ -410,6 +410,10 @@
         <item>"/system/lib64/libRSDriver.so"</item>
         <item>"/system/lib64/libRSCpuRef.so"</item>
         <item>"/system/lib64/libblas.so"</item>
+        <item>"/vendor/lib/libCB.so"</item>
+        <item>"/vendor/lib/libgsl.so"</item>
+        <item>"/vendor/lib64/libCB.so"</item>
+        <item>"/vendor/lib64/libgsl.so"</item>
         <item>"/apex/com.android.art/javalib/arm64/boot.oat"</item>
         <item>"/apex/com.android.art/javalib/arm64/boot-core-libart.oat"</item>
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
@@ -446,6 +450,10 @@
         <item>"/system/lib64/libRSDriver.so"</item>
         <item>"/system/lib64/libRSCpuRef.so"</item>
         <item>"/system/lib64/libblas.so"</item>
+        <item>"/vendor/lib/libCB.so"</item>
+        <item>"/vendor/lib/libgsl.so"</item>
+        <item>"/vendor/lib64/libCB.so"</item>
+        <item>"/vendor/lib64/libgsl.so"</item>
     </string-array>
 
     <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
