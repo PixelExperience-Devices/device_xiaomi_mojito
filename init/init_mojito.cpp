@@ -51,14 +51,16 @@ void property_override(string prop, string value)
 
 void vendor_load_properties()
 {
-    string device;
+    string device, model;
 
     string hwname = GetProperty("ro.boot.hwname", "");
 
     if (hwname == "sunny") {
         device = "sunny";
+        model = "M2101K7AG";
     } else {
         device = "mojito";
+        model = "M2101K7AG";
     }
 
     // Override all partitions' props
@@ -67,6 +69,7 @@ void vendor_load_properties()
         property_override(string("ro.product.") + prop + string("board"), device);
         property_override(string("ro.product.") + prop + string("device"), device);
         property_override(string("ro.product.") + prop + string("name"), device);
+        property_override(string("ro.product.") + prop + string("model"), model);
         property_override(string("ro.") + prop + string("build.product"), device);
     }
 
