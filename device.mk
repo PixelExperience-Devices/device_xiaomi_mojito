@@ -129,11 +129,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
 
-# Kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/kernel:kernel \
-    $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.qti
