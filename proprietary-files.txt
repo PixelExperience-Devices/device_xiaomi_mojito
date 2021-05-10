@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from mojito-user 11 RKQ1.201022.002 V12.0.4.0.RKGMIXM release-keys
+# All unpinned blobs below are extracted from mojito-user 11 RKQ1.201022.002 V12.0.7.0.RKGMIXM release-keys
 
 # ADSP Modules
 system_ext/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
