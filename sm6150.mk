@@ -313,7 +313,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service.xiaomi_sm6150
 
 # WiFi
 PRODUCT_PACKAGES += \
