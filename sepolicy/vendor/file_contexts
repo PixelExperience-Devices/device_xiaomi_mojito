@@ -19,6 +19,10 @@
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/smart_fps_value           u:object_r:vendor_sysfs_smart_fps:s0
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dynamic_fps               u:object_r:vendor_sysfs_dynamic_fps:s0
 
+# Dolby
+/data/vendor/dolby(/.*)?                                                u:object_r:vendor_audio_data_file:s0
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                u:object_r:hal_dms_default_exec:s0
+
 # EFS Block devices
 /dev/block/sde[0-9]+                                                        u:object_r:efs_block_device:s0
 
