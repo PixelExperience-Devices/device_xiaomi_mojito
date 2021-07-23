@@ -1,0 +1,8 @@
+[
+ {
+   "repository"  : "vendor_xiaomi_sm6150-common",
+   "target_path" : "vendor/xiaomi/sm6150-common",
+   "remote"      : "pixel-devices-blobs",
+   "branch"      : "eleven"
+ }
+]
