@@ -27,6 +27,10 @@ $(call inherit-product, vendor/xiaomi/sm6150-common/sm6150-common-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
