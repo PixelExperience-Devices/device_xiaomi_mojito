@@ -1,11 +1,12 @@
 cc_binary {
-    name: "android.hardware.lights-service.example",
+    name: "android.hardware.lights-service.xiaomi_sm6150",
     relative_install_path: "hw",
-    init_rc: ["lights-default.rc"],
-    vintf_fragments: ["lights-default.xml"],
+    init_rc: ["android.hardware.lights-service.xiaomi_sm6150.rc"],
+    vintf_fragments: ["android.hardware.lights.xiaomi_sm6150.xml"],
     vendor: true,
     shared_libs: [
         "libbase",
+        "libhardware",
         "libbinder_ndk",
         "android.hardware.light-ndk_platform",
     ],
