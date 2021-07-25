@@ -273,17 +273,8 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
-    init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    mishow.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
