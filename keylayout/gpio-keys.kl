@@ -1,0 +1,15 @@
+#
+# Gpio driver
+#
+# Copyright (c) 2013,2014 The Linux Foundation. All rights reserved
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License Version 2
+# as published by the Free Software Foundation.
+#
+
+key 115   VOLUME_UP
+key 114   VOLUME_DOWN
+key 102   HOME
+key 528   FOCUS
+key 766   CAMERA
