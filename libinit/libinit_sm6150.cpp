@@ -38,12 +38,12 @@ void set_variant_props(const variant_info_t variant) {
         property_override(SKU_PROP, "nfc");
 }
 
-void property_override(char const prop[], char const value[], bool add) {
-    auto pi = (prop_info *) __system_property_find(prop);
+void property_override(std::string prop, std::string value, bool add) {
+    auto pi = (prop_info *) __system_property_find(prop.c_str());
     if (pi != nullptr) {
-        __system_property_update(pi, value, strlen(value));
+        __system_property_update(pi, value.c_str(), value.length());
     } else if (add) {
-        __system_property_add(prop, strlen(prop), value, strlen(value));
+        __system_property_add(prop.c_str(), prop.length(), value.c_str(), value.length());
     }
 }
 
@@ -65,6 +65,6 @@ void set_ro_build_prop(const std::string &prop, const std::string &value, bool p
         else
             prop_name = "ro." + source + "build." + prop;
 
-        property_override(prop_name.c_str(), value.c_str(), true);
+        property_override(prop_name, value, true);
     }
 }
