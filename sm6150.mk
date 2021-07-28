@@ -279,14 +279,10 @@ PRODUCT_PACKAGES += \
     com.gsma.services.nfc \
     libchrome.vendor \
     NfcNci \
-    SecureElement \
     Tag
 
 PRODUCT_PACKAGES += \
-    vendor.nxp.hardware.nfc@1.1 \
-    vendor.nxp.hardware.nfc@2.0 \
-    vendor.nxp.hardware.nfc@1.1.vendor \
-    vendor.nxp.hardware.nfc@2.0.vendor
+    android.hardware.nfc@1.2-service
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/android.hardware.nfc.ese.xml \
