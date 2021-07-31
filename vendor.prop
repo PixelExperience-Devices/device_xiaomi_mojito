@@ -99,14 +99,6 @@ camera.disable_zsl_mode=1
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
-# Dalvik
-dalvik.vm.heapstartsize=8m
-dalvik.vm.heapsize=512m
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heaptargetutilization=0.75
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapmaxfree=8m
-
 # Data modules
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
