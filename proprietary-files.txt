@@ -52,6 +52,10 @@ system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 
+# Batterysecret
+vendor/bin/batterysecret
+vendor/etc/init/init.batterysecret.rc
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
