@@ -34,7 +34,9 @@ on boot
 
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/hw_reset
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/modalias
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
+    chown system system /sys/bus/platform/devices/soc/soc:fpc1020/compatible_all
 
     chown system system /sys/class/drm/card0-DSI-1/disp_param
     chmod 0700 /sys/class/drm/card0-DSI-1/disp_param
@@ -42,6 +44,7 @@ on boot
     chmod 0700 /sys/class/drm/card0-DSI-1/panel_info
 
     chmod 0666 /dev/input/event2
+    chmod 0666 /dev/qseecom
 
 on post-fs-data
     mkdir /data/vendor/fpc 0770 system system
