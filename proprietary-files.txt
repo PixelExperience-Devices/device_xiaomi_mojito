@@ -444,6 +444,19 @@ vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
 
+# Neural Networks
+vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
+vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
+-vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti-hta.xml
+vendor/lib64/libnpu.so
+vendor/lib64/libhexagon_nn_stub.so
+vendor/lib64/libhta_hexagon_runtime.so
+vendor/lib64/unnhal-acc-adreno.so
+vendor/lib64/unnhal-acc-common.so
+vendor/lib64/unnhal-acc-hta.so
+vendor/lib64/unnhal-acc-hvx.so
+
 # NFC - from sweet-user 11 RKQ1.200826.002 V12.5.4.0.RKFMIXM release-keys
 vendor/etc/libnfc-nci.conf|c327a2939caa3d544c99e9fc49d74e67b150a5a2
 vendor/etc/libnfc-nxp.conf|8115120f8822e3868db486f50856a697af90b352
