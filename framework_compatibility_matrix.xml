@@ -8,6 +8,22 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>com.fingerprints.extension</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFingerprintEngineering</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintNavigation</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IFingerprintSensorTest</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.radio</name>
         <version>1.0-2</version>
         <interface>
