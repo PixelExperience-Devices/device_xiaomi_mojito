@@ -6,6 +6,7 @@ audio_hal.in_period_size                u:object_r:vendor_audio_prop:s0
 camera.                                         u:object_r:vendor_camera_prop:s0
 persist.camera.                                 u:object_r:vendor_camera_prop:s0
 persist.vendor.camera                           u:object_r:vendor_camera_prop:s0
+persist.vednor.camera.arcsoftlog                u:object_r:vendor_camera_prop:s0
 vendor.camera.boot_complete                     u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.                           u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                               u:object_r:vendor_camera_prop:s0
