@@ -26,6 +26,9 @@ AB_OTA_PARTITIONS += \
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
+# Board
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 
@@ -36,6 +39,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_mojito
 # Kernel
 TARGET_KERNEL_CONFIG := mojito_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
+
+# OTA assert
+TARGET_OTA_ASSERT_DEVICE := mojito,sunny
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
