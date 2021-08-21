@@ -1,0 +1,12 @@
+//
+// Copyright (C) 2021 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_mojito",
+    defaults: ["//device/xiaomi/sm6150-common:libinit_sm6150_defaults"],
+    srcs: ["init_mojito.cpp"],
+    whole_static_libs: ["//device/xiaomi/sm6150-common:libinit_sm6150"],
+}

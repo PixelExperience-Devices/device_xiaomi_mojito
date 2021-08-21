@@ -29,6 +29,10 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mojito
+TARGET_RECOVERY_DEVICE_MODULES := libinit_mojito
+
 # Kernel
 TARGET_KERNEL_CONFIG := mojito_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
