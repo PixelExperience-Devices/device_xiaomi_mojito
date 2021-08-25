@@ -4,7 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <libinit_sm6150.h>
+#include <libinit_dalvik_heap.h>
+#include <libinit_variant.h>
+
+#include "vendor_init.h"
 
 static const variant_info_t mojito_info = {
     .hwc_value = "GLOBAL",

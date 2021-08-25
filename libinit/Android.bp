@@ -5,8 +5,9 @@
 //
 
 cc_library_static {
-    name: "libinit_mojito",
-    defaults: ["//device/xiaomi/sm6150-common:libinit_sm6150_defaults"],
-    srcs: ["init_mojito.cpp"],
-    whole_static_libs: ["//device/xiaomi/sm6150-common:libinit_sm6150"],
+    name: "init_xiaomi_mojito",
+    srcs: ["init_xiaomi_mojito.cpp"],
+    whole_static_libs: ["//device/xiaomi/sm6150-common:libinit_xiaomi_sm6150"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
 }
