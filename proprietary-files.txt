@@ -465,7 +465,6 @@ vendor/firmware/aw87xxx_pid_5a_voice_0.bin
 vendor/firmware/aw87xxx_vmax_0.bin
 vendor/firmware/aw87xxx_vmax_1.bin
 vendor/firmware/Conf_MultipleTest.ini
-vendor/firmware/focaltech_ts_fw_samsung.bin
 vendor/firmware/wigig/wigig.ini
 
 # IPA
@@ -652,6 +651,9 @@ vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermald-devices.conf
+
+# Touch Firmware - from mojito-user 11 RKQ1.201022.002 V12.0.5.0.RKGMIXM release-keys
+vendor/firmware/focaltech_ts_fw_samsung.bin|0670d28136bf8616fb0ff1d4ae26c60118756c05
 
 # Touch Improve
 -vendor/app/com.qualcomm.qti.improvetouch.service/com.qualcomm.qti.improvetouch.service.apk
