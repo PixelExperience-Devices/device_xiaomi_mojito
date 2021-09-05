@@ -391,6 +391,9 @@ vendor/etc/camera/watermark_font_2300_3199.dat
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Camera Service
+lib/libcameraservice.so
+
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
 
