@@ -425,4 +425,7 @@
          supported by the device, but not necessarily appear in config_availableColorModes. The
          regularly selected color mode will be used if this value is negative. -->
     <integer name="config_accessibilityColorMode">2</integer>
+
+    <!-- Whether device has fingerprint on power button -->
+    <bool name="config_powerButtonFingerprint">true</bool>
 </resources>
