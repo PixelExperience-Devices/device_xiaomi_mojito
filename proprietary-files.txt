@@ -1,6 +1,24 @@
 # Unpinned blobs from mojito-user 11 RKQ1.201022.002 V12.5.2.0.RKGMIXM release-keys
 
 # ACDB
+vendor/etc/acdbdata/IDP/india/INDIA_Bluetooth_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_Codec_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_General_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_Global_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_Handset_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_Hdmi_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_Headset_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_Speaker_cal.acdb
+vendor/etc/acdbdata/IDP/india/INDIA_workspaceFile.qwsp
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Bluetooth_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Codec_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_General_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Global_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Handset_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Hdmi_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Headset_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_Speaker_cal.acdb
+vendor/etc/acdbdata/IDP/sm6150-tavil-snd-card/IDP_WCD9340_workspaceFile.qwsp
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
@@ -10,6 +28,15 @@ vendor/etc/acdbdata/IDP/IDP_Hdmi_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Headset_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Speaker_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_workspaceFile.qwsp
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Codec_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ADSP Modules
