@@ -1,4 +1,4 @@
-# Unpinned blobs from mojito-user 11 RKQ1.201022.002 V12.5.2.0.RKGMIXM release-keys
+# Unpinned blobs from mojito-user 11 RKQ1.201022.002 V12.5.3.0.RKGMIXM release-keys
 
 # ACDB
 vendor/etc/acdbdata/IDP/india/INDIA_Bluetooth_cal.acdb
