@@ -122,3 +122,12 @@ genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup                       
 genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup                                                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wma/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup                                                                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:ant_check_div/wakeup                                                                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/wakeup                                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup                                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup/wakeup5                                                                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify                                                                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify/wakeup13                                                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:ant_check/wakeup                                                                                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone                                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-2/2-0065/power_supply/bq2597x-standalone/wakeup11                                              u:object_r:sysfs_wakeup:s0
