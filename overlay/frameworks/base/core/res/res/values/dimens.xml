@@ -26,8 +26,8 @@
     <dimen name="quick_qs_offset_height">@dimen/status_bar_height_portrait</dimen>
 
     <!-- Radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">121px</dimen>
+    <dimen name="rounded_corner_radius">119px</dimen>
 
     <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
-    <dimen name="rounded_corner_radius_adjustment">25px</dimen>
+    <dimen name="rounded_corner_radius_adjustment">22px</dimen>
 </resources>
