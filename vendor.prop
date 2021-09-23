@@ -1,7 +1,7 @@
 # Audio
 vendor.audio.adm.buffering.ms=2
 ro.vendor.audio.us.proximity=true
-vendor.voice.path.for.pcm.voip=true
+vendor.voice.path.for.pcm.voip=false
 ro.vendor.audio.sdk.fluencetype=none
 persist.vendor.audio.voicecall.speaker.stereo=true
 
