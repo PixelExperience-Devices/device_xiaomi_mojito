@@ -19,6 +19,7 @@
 
 # Display
 /dev/xiaomi-touch                                                                                       u:object_r:touchfeature_device:s0
+/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui                                                   u:object_r:vendor_sysfs_fod:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/disp_param        u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/dynamic_fps       u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/hbm_status        u:object_r:vendor_sysfs_graphics:s0
