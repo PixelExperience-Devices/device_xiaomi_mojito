@@ -10,3 +10,8 @@ ro.vendor.display.svi=1
 vendor.display.svi.config=1
 ro.vendor.display.sensortype=2
 vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
+
+# HVDCP
+persist.vendor.cp.fcc_main_ua=400000
+persist.vendor.cp.taper_term_mv=6500
+persist.vendor.cp.vbus_offset_mv=1040
