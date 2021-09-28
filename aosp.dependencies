@@ -3,7 +3,7 @@
    "repository"  : "device_xiaomi_sm6150-common",
    "target_path" : "device/xiaomi/sm6150-common",
    "remote"      : "pixel-devices",
-   "branch"      : "eleven"
+   "branch"      : "eleven-wip"
  },
  {
    "repository"  : "kernel_xiaomi_mojito",
