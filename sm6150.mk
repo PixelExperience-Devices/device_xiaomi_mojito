@@ -170,7 +170,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey
+    android.hardware.drm@1.4-service.clearkey
 
 # fastbootd
 ifeq ($(PRODUCT_USE_DYNAMIC_PARTITIONS),true)
