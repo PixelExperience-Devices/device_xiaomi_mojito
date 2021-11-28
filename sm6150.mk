@@ -183,12 +183,12 @@ PRODUCT_PACKAGES += \
 endif
 
 # Fingerprint
-ifeq ($(TARGET_HAS_FOD),true)
+ifeq ($(TARGET_HAS_UDFPS),true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150-ext
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150-udfps
 else
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sm6150
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sm6150
 endif
 
 PRODUCT_COPY_FILES += \
