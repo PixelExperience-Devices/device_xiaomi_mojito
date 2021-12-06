@@ -1,14 +1,14 @@
 [
  {
-   "repository"  : "android_hardware_xiaomi",
+   "repository"  : "hardware_xiaomi",
    "target_path" : "hardware/xiaomi",
-   "remote"      : "lineage",
-   "branch"      : "lineage-18.1"
+   "remote"      : "pixel",
+   "branch"      : "twelve"
  },
  {
    "repository"  : "vendor_xiaomi_sm6150-common",
    "target_path" : "vendor/xiaomi/sm6150-common",
    "remote"      : "pixel-devices-blobs",
-   "branch"      : "eleven"
+   "branch"      : "twelve"
  }
 ]
