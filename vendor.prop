@@ -1,14 +1,7 @@
 # Audio
-ro.vendor.audio.us.proximity=true
 vendor.voice.path.for.pcm.voip=false
 ro.vendor.audio.sdk.fluencetype=none
 persist.vendor.audio.voicecall.speaker.stereo=true
-
-# Display
-ro.vendor.display.svi=1
-vendor.display.svi.config=1
-ro.vendor.display.sensortype=2
-vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
 
 # HVDCP
 persist.vendor.cp.fcc_main_ua=400000
