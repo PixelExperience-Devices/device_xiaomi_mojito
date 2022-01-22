@@ -1,5 +1,4 @@
 # Audio
-vendor.voice.path.for.pcm.voip=false
 ro.vendor.audio.sdk.fluencetype=none
 persist.vendor.audio.voicecall.speaker.stereo=true
 
