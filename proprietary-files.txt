@@ -360,9 +360,6 @@ vendor/lib64/camera/components/libmmcamera_cac3.so
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 
-# Camera Service
-lib/libcameraservice.so
-
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sm6150.so
 

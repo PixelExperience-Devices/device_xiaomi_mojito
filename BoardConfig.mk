@@ -9,9 +9,6 @@ DEVICE_PATH := device/xiaomi/mojito
 # Audio
 TARGET_PROVIDES_AUDIO_EXTNS := true
 
-# Broken rules
-BUILD_BROKEN_DUP_RULES := true
-
 # Display
 TARGET_SCREEN_DENSITY := 440
 
