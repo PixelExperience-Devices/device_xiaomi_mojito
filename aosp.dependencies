@@ -7,7 +7,7 @@
  },
  {
    "repository"  : "kernel_xiaomi_mojito",
-   "target_path" : "kernel/xiaomi/sm6150",
+   "target_path" : "kernel/xiaomi/mojito",
    "remote"      : "pixel-devices",
    "branch"      : "twelve"
  },

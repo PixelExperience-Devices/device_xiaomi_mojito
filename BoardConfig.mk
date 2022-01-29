@@ -18,7 +18,7 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mojito
 
 # Kernel
 TARGET_KERNEL_CONFIG := mojito_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mojito
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
