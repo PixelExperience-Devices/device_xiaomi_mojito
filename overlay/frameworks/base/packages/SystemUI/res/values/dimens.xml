@@ -20,6 +20,12 @@
     <!-- Rounded corner -->
     <dimen name="rounded_corner_content_padding">55px</dimen>
 
+    <!-- The padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">1.5dp</dimen>
+
+    <!-- Height of the status bar header bar when on Keyguard (match status_bar_portrait) -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
+
     <!-- Location of physical charger port -->
     <dimen name="physical_charger_port_location_normalized_x">0.5</dimen>
     <dimen name="physical_charger_port_location_normalized_y">1</dimen>
