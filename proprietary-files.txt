@@ -177,7 +177,7 @@ system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/dpmapi.xml
 system_ext/framework/com.qti.dpmframework.jar
 system_ext/framework/dpmapi.jar
--system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
+-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_system_ext
 -system_ext/lib64/libdpmctmgr.so
 -system_ext/lib64/libdpmfdmgr.so
 -system_ext/lib64/libdpmframework.so
@@ -185,7 +185,7 @@ system_ext/framework/dpmapi.jar
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 -vendor/bin/dpmQmiMgr
 vendor/etc/init/dpmQmiMgr.rc
--vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
+-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE=com.qualcomm.qti.dpm.api@1.0_vendor
 -vendor/lib64/libdpmqmihal.so
 
 # DRM
@@ -227,9 +227,9 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 # FM
 -system_ext/lib64/fm_helium.so
 -system_ext/lib64/libfm-hci.so
--system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+-system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_system_ext
 -vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
--vendor/lib64/vendor.qti.hardware.fm@1.0.so
+-vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_vendor
 
 # Graphics
 -vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk;PRESIGNED
@@ -345,14 +345,14 @@ system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 -system_ext/lib64/libimscamera_jni.so
 -system_ext/lib64/libimsmedia_jni.so
 -system_ext/lib64/vendor.qti.diaghal@1.0.so
--system_ext/lib64/vendor.qti.ims.factory@1.0.so
--system_ext/lib64/vendor.qti.ims.factory@1.1.so
--system_ext/lib64/vendor.qti.ims.factory@2.0.so
--system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
--system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
--system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
--system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
--system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+-system_ext/lib64/vendor.qti.ims.factory@1.0.so;MODULE=vendor.qti.ims.factory@1.0_system_ext
+-system_ext/lib64/vendor.qti.ims.factory@1.1.so;MODULE=vendor.qti.ims.factory@1.1_system_ext
+-system_ext/lib64/vendor.qti.ims.factory@2.0.so;MODULE=vendor.qti.ims.factory@2.0_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so;MODULE=vendor.qti.ims.rcsconfig@1.0_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so;MODULE=vendor.qti.ims.rcsconfig@1.1_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so;MODULE=vendor.qti.ims.rcsconfig@2.0_system_ext
+-system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so;MODULE=vendor.qti.ims.rcsconfig@2.1_system_ext
+-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_system_ext
 -system_ext/priv-app/ims/ims.apk
 -vendor/bin/ims_rtp_daemon
 -vendor/bin/imsdatadaemon
@@ -395,14 +395,14 @@ vendor/etc/seccomp_policy/imsrtp.policy
 -vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
 -vendor/lib64/vendor.qti.ims.callcapability@1.0.so
 -vendor/lib64/vendor.qti.ims.callinfo@1.0.so
--vendor/lib64/vendor.qti.ims.factory@1.0.so
--vendor/lib64/vendor.qti.ims.factory@1.1.so
--vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
--vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
--vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
--vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
+-vendor/lib64/vendor.qti.ims.factory@1.0.so;MODULE=vendor.qti.ims.factory@1.0_vendor
+-vendor/lib64/vendor.qti.ims.factory@1.1.so;MODULE=vendor.qti.ims.factory@1.1_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so;MODULE=vendor.qti.ims.rcsconfig@1.0_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so;MODULE=vendor.qti.ims.rcsconfig@1.1_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so;MODULE=vendor.qti.ims.rcsconfig@2.0_vendor
+-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so;MODULE=vendor.qti.ims.rcsconfig@2.1_vendor
 -vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
--vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+-vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE=vendor.qti.imsrtpservice@3.0_vendor
 
 # IPA
 vendor/etc/init/ipa_fws.rc
