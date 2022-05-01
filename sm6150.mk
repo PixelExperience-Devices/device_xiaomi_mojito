@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.1-impl \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
@@ -483,6 +484,7 @@ PRODUCT_PACKAGES += \
     extphonelib_product.xml \
     ims-ext-common \
     ims_ext_common.xml \
+    qti_telephony_utils_prd.xml \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-hidl-wrapper-prd \
@@ -583,8 +585,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail_32 \
     libdisplayconfig.qti \
+    libdisplayconfig.system.qti \
     libnl \
     libqdMetaData \
+    libqdMetaData.system \
     libwfdaac_vendor
 
 # Wlan
