@@ -390,12 +390,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_nfc/com.nxp.mifare.xml
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosp
-
-PRODUCT_ENFORCE_RRO_TARGETS += *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
+PRODUCT_PACKAGES += \
+    CarrierConfigSM6150 \
+    FrameworksSM6150 \
+    SettingsProviderSM6150 \
+    SettingsSM6150 \
+    SystemUISM6150 \
+    TelephonySM6150 \
+    WifiSM6150
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -569,7 +571,6 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     libwpa_client \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 

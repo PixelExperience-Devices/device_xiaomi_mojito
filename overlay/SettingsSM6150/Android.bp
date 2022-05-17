@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "SettingsSM6150",
+    theme: "SettingsSM6150",
+    sdk_version: "current",
+    vendor: true,
+}

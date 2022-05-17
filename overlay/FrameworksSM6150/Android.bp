@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "FrameworksSM6150",
+    theme: "FrameworksSM6150",
+    sdk_version: "current",
+    vendor: true,
+}
