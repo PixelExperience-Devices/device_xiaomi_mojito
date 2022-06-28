@@ -4,11 +4,6 @@ persist.vendor.camera                      u:object_r:vendor_camera_prop:s0
 vendor.camera.                             u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                          u:object_r:vendor_camera_prop:s0
 
-# DFPS
-persist.vendor.dfps.level	           u:object_r:vendor_display_prop:s0
-persist.vendor.video.dfps.level	           u:object_r:vendor_display_prop:s0
-persist.vendor.power.dfps.level	           u:object_r:vendor_display_prop:s0
-
 # Fingerprint
 persist.vendor.fpc.                        u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.                     u:object_r:vendor_fp_prop:s0
