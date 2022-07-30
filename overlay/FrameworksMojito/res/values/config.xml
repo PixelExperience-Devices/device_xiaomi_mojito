@@ -226,8 +226,8 @@
         <item>369</item>
         <item>434</item>
         <item>500</item>
-        <item>500</item>
-        <item>500</item>
+        <item>590</item>
+        <item>680</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -248,7 +248,7 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>4</item>    <!-- index 1 -->
-        <item>450</item>  <!-- index 2 -->
+        <item>475</item>  <!-- index 2 -->
     </array>
 
     <!-- Screen brightness used to dim the screen when the user activity
