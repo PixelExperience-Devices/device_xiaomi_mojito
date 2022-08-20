@@ -44,7 +44,7 @@ on early-init
     chown system graphics /sys/class/drm/card0/device/power/control
 
     # Disable UFS clock scaling
-    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
+    write /sys/bus/platform/devices/${ro.boot.bootdevice}/clkscale_enable 0
 
 on init
     # Create cgroup mount point for memory
@@ -247,7 +247,7 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     # Enable UFS clock scaling back
-    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    write /sys/bus/platform/devices/${ro.boot.bootdevice}/clkscale_enable 1
 
     chown media audio /sys/kernel/wdsp0/boot
 
