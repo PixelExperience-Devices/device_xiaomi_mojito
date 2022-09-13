@@ -3,18 +3,18 @@
    "repository"  : "hardware_xiaomi",
    "target_path" : "hardware/xiaomi",
    "remote"      : "pixel",
-   "branch"      : "twelve"
+   "branch"      : "thirteen"
  },
  {
    "repository"  : "device_xiaomi_sm6150-extras",
    "target_path" : "device/xiaomi/sm6150-extras",
    "remote"      : "pixel-devices",
-   "branch"      : "twelve"
+   "branch"      : "thirteen"
  },
  {
    "repository"  : "vendor_xiaomi_sm6150-common",
    "target_path" : "vendor/xiaomi/sm6150-common",
    "remote"      : "pixel-devices-blobs",
-   "branch"      : "twelve"
+   "branch"      : "thirteen"
  }
 ]
