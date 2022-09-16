@@ -307,9 +307,10 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 -vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # IMS
--system_ext/app/ImsRcsService/ImsRcsService.apk
+-system_ext/app/ImsRcsService/ImsRcsService.apk|7e29c11b52bce9bdb33d0ea364faa13150b8cd08
 -system_ext/app/uceShimService/uceShimService.apk
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar|e01800d96b0db524836856410d3dd0b9352ec46c
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
