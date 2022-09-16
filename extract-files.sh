@@ -11,6 +11,9 @@ function blob_fixup() {
             # Remove touchfeature from sensor HALs loading list
             sed -i "/sensors.touch.detect.so/d" "${2}"
             ;;
+        vendor/lib64/camera/components/com.qti.node.watermark.so)
+            ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
+            ;;
     esac
 }
 
