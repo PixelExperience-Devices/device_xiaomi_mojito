@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter mojito sweet tucana,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),mojito)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
