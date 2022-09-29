@@ -205,7 +205,6 @@ PRODUCT_PACKAGES += \
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
 
 # fastbootd
 PRODUCT_PACKAGES += \
