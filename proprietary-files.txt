@@ -606,7 +606,6 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 -vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE=vendor.qti.hardware.fm@1.0_vendor
 
 # Graphics
--vendor/app/com.qualcomm.qti.gpudrivers.sm6150.api30/com.qualcomm.qti.gpudrivers.sm6150.api30.apk;PRESIGNED
 -vendor/lib/egl/eglSubDriverAndroid.so
 -vendor/lib/egl/libEGL_adreno.so
 -vendor/lib/egl/libGLESv1_CM_adreno.so

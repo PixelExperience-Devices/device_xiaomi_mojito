@@ -160,9 +160,6 @@ vendor.gralloc.disable_ubwc=0
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
-# GPU
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
-
 # HVDCP
 persist.vendor.cp.fcc_main_ua=400000
 persist.vendor.cp.taper_term_mv=6500
