@@ -114,9 +114,9 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 10
 
-    # Set xiaomi touch permissions
-    chown system system /dev/xiaomi-touch
-    chmod 0660 /dev/xiaomi-touch
+    # Set kernel touchpanel permissions
+    chmod 0660 /sys/touchpanel/double_tap
+    chown system system /sys/touchpanel/double_tap
 
     # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"

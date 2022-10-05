@@ -158,7 +158,7 @@ TARGET_BOARD_PLATFORM := sm6150
 BOARD_USES_QCOM_HARDWARE := true
 
 # Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
+TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
