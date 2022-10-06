@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "WifiSM6150",
-    theme: "WifiSM6150",
+    name: "MojitoWifi",
+    theme: "MojitoWifi",
     sdk_version: "current",
     vendor: true
 }
