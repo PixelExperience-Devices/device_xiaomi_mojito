@@ -1195,6 +1195,8 @@ vendor/firmware/wigig/wigig.ini
 
 # WLAN
 -vendor/bin/cnss-daemon
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Xiaomi MAC
 -vendor/bin/nv_mac
