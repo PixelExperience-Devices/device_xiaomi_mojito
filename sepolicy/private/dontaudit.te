@@ -1,2 +1,0 @@
-# please don't kill yourself unless it's allowed
-dontaudit linkerconfig self:capability kill;

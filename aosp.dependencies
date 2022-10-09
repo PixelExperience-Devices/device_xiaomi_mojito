@@ -1,5 +1,11 @@
 [
  {
+   "repository"  : "device_xiaomi_mojito-sepolicy",
+   "target_path" : "device/xiaomi/mojito-sepolicy",
+   "remote"      : "pixel-devices",
+   "branch"      : "thirteen"
+ },
+ {
    "repository"  : "device_xiaomi_sm6150-extras",
    "target_path" : "device/xiaomi/sm6150-extras",
    "remote"      : "pixel-devices",
