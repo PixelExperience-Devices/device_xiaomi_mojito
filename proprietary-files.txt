@@ -886,16 +886,6 @@ vendor/etc/media_codecs_vendor_v2.xml
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_vendor.xml
 
-# Mlipay
--vendor/bin/mlipayd@1.1
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
--vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
--vendor/lib64/libmlipay.so
--vendor/lib64/libmlipay@1.1.so
--vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
--vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
--vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
-
 # Native libraries permissions
 vendor/etc/public.libraries.txt
 
