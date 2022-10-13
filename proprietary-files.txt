@@ -123,6 +123,17 @@ vendor/etc/init/vendor.qti.cdsprpc-service.rc
 -vendor/lib/hw/audio.primary.sm6150.so
 -vendor/lib/libaudio_log_utils.so
 
+# Audio xml
+vendor/etc/audio_effects.xml|2f51e2cac6e7fba028edb92057b424f52aa62bb8
+vendor/etc/audio_io_policy.conf|0581a9f310a5783548e472b6fffb194265104f4b
+vendor/etc/audio_platform_info.xml|464bce1f5bab6f01b62fba7ccfd8811c7c44adcb
+vendor/etc/audio_platform_info_intcodec.xml|56436d69c4af46ec9f10a7291f3ef47798e32019
+vendor/etc/audio_policy_configuration.xml|cf2f2fd7dbdfc47855b6bbd8f31b81cf63c4e92a
+vendor/etc/audio_policy_volumes.xml|8d1c1bf10f52672266fd292dbfcdc0d86e3321d0
+vendor/etc/mixer_paths_idp.xml|d6ecd258634d41120a5d53013911a7103dd14f1c
+vendor/etc/mixer_paths_idp_other.xml|d6ecd258634d41120a5d53013911a7103dd14f1c
+vendor/etc/mixer_paths_wcd9375.xml|c04086e91df59ea07d8230a587090c19e7cb04cd
+
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 -vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
