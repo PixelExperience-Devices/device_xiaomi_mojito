@@ -22,11 +22,5 @@
    "target_path" : "vendor/xiaomi/mojito",
    "remote"      : "pixel-devices-blobs",
    "branch"      : "thirteen"
- },
- {
-   "repository"  : "hardware_xiaomi",
-   "target_path" : "hardware/xiaomi",
-   "remote"      : "pixel",
-   "branch"      : "thirteen"
  }
 ]
