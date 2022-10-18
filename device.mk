@@ -220,32 +220,9 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor
-
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti
-
-PRODUCT_PACKAGES += \
-    libbatching \
-    libgeofencing \
-    libgnss
-
-PRODUCT_PACKAGES += \
-    apdr.conf \
-    flp.conf \
-    gnss_antenna_info.conf \
-    gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf
-
-PRODUCT_PACKAGES += \
-    gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
