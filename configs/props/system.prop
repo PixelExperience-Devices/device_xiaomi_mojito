@@ -1,6 +1,3 @@
-# Bluetooth
-vendor.bluetooth.soc=cherokee
-
 # Charger
 ro.charger.enable_suspend=true
 
@@ -9,23 +6,15 @@ debug.force_no_blanking=true
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q6150-17263-1
-
-# RCS
-persist.rcs.supported=1
+ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187
+ro.netflix.signup=1
 
 # Radio
-persist.radio.multisim.config=dsds
 persist.radio.NO_STAPA=1
 persist.radio.VT_CAM_INTERFACE=1
 persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.multisim.config=dsds
 ril.subscription.types=RUIM
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
-persist.sys.fflag.override.settings_provider_model=false
-
-# Recovery
-ro.recovery.ui.margin_height=48
-
-# WiFi
-wifi.interface=wlan0
