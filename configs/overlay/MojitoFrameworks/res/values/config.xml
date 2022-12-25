@@ -654,4 +654,12 @@
         <item>115</item> <!--item>sensorRadius</item-->
     </array>
 
+    <!-- The list of package IDs that are allowed to use aux cameras.
+         NOTE: If this list is empty then all apps will be able to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageAllowList" translatable="false">
+        <item>org.codeaurora.snapcam</item>
+        <item>com.android.camera</item>
+        <item>org.pixelexperience.faceunlock</item>
+    </string-array>
+
 </resources>
