@@ -213,6 +213,9 @@ PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
 
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0.vendor
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
