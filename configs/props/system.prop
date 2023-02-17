@@ -10,11 +10,14 @@ ro.netflix.channel=497730f0-ad4b-11e7-95a4-c7ad113ce187
 ro.netflix.signup=1
 
 # Radio
+DEVICE_PROVISIONED=1
+persist.data.df.dev_name=rmnet_usb0
 persist.radio.NO_STAPA=1
 persist.radio.VT_CAM_INTERFACE=1
 persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.atfwd.start=false
 persist.radio.multisim.config=dsds
-ril.subscription.types=RUIM
+ril.subscription.types=NV,RUIM
 ro.telephony.default_cdma_sub=0
-ro.telephony.default_network=22,22
+ro.telephony.default_network=22,20
 telephony.lteOnCdmaDevice=1
