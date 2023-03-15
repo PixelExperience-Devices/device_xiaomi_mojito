@@ -234,7 +234,7 @@ persist.vendor.radio.snapshot_enabled=1
 persist.vendor.radio.snapshot_timer=5
 
 # Soc
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
