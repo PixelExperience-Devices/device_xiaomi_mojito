@@ -41,10 +41,10 @@ void load_sunny() {
     property_override("ro.product.manufacturer", "Xiaomi");
     property_override("ro.product.model", "M2101K7AI");
     property_override("ro.product.name", "sunny");
-    property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.1.0.SKGMIXM:user/release-keys");
-    property_override("ro.vendor.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.1.0.SKGMIXM:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.1.0.SKGMIXM:user/release-keys");
-    property_override("ro.build.description", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.1.0.SKGMIXM:user/release-keys");
+    property_override("ro.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys");
+    property_override("ro.vendor.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys");
+    property_override("ro.build.description", "Redmi/sunny_global/sunny:12/RKQ1.210614.002/V14.0.2.0.SKGMIXM:user/release-keys");
 }
 
 void vendor_load_properties() {
