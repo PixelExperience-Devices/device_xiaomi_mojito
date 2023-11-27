@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "camxoverridesettings.txt",
+    src: "camxoverridesettings.txt",
+    sub_dir: "camera",
+    vendor: true,
+}
