@@ -31,8 +31,6 @@ on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-
     # Boot time fs tuning
     write /sys/block/sda/queue/iostats 0
     write /sys/block/sda/queue/scheduler cfq
